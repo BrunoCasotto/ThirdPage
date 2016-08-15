@@ -1,0 +1,25 @@
+.overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  border-top: 0;
+  border-left: 0;
+  background-color: rgba(255, 255, 255, 0.64);
+  z-index: 100;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+  
+  .menu {
+    background-color: #585858;
+
+    &__list {
+
+      &__item {
+
+      }
+    }
+  }
+
+}
