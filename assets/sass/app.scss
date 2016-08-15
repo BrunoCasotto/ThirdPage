@@ -1,0 +1,14 @@
+/* base import*/
+@import 'base/base';
+
+/*imports template*/
+@import 'template';
+
+/*modules import*/
+@import 'styles/modules/content';
+
+/*components import*/
+
+/*pages import*/
+@import 'styles/pages/portfolio';
+@import 'styles/pages/contact';
