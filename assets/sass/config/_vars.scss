@@ -1,0 +1,24 @@
+
+/* variable for media-query mixin*/
+$sizes: (
+	xs: 336px,
+	sm: 776px,
+	md: 992px,
+	gl: 1200px
+);
+
+/*variable for work-page*/
+$margin-block-work: 0.5em;
+
+/*variable for grid*/
+$grid-offsets: (
+	sm:4px,
+	md:12px,
+	gl:20px
+);
+
+/*variable for form*/
+$form-offset: 10px;
+
+/*variable for tab number*/
+$tab: 3;

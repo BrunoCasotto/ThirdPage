@@ -10,21 +10,36 @@
   left: 50%;
   transform: translate(-50%,-50%);
   transition:opacity .5s;
+  transition-timing-function: cubic-bezier(0.04, 0.23, 0.91, 0.74);
   opacity: 0;
 
   &--active {
     transition:opacify .5s;
-    transition-timing-function: cubic-bezier(.42, 0, .58, 1);
+    transition-timing-function: cubic-bezier(0.04, 0.23, 0.91, 0.74);
     opacity: 1;
 
     .menu__content {
       transition:transform .5s;
+      transition-timing-function: cubic-bezier(0.04, 0.23, 0.91, 0.74);
       transform: translateX(0%);
 
-      &__list {
-        transition:width 1s;
-        width: 100%;
+      @include media-query(sm,max) {
+        transition:transform .5s, width 0.8s;
+        transition-timing-function: cubic-bezier(0, -0.4, 0.91, 0.98);
+        transform: translateY(0%);
+        width: 100vw;
       }
+
+      &__list {
+        // transition:width 1s;
+        width: 100%;
+
+        &__item {
+            transform: translateX(0%);
+        }
+      }
+
+
     }
   }
 
@@ -34,12 +49,20 @@
     flex-direction: column;
     background-color: #585858;
     padding: 40px;
-    width: 410px;
     color:white;
     height: 100%;
     right: 0;
-    transition:transform .5s;
+    transition:transform .5s, width 0.5s;
+    transition-timing-function: cubic-bezier(0.04, 0.23, 0.91, 0.74);
     transform: translateX(100%);
+    width: 410px;
+
+
+    @include media-query(sm,max) {
+      transition-timing-function: cubic-bezier(0, -0.4, 0.91, 0.98);
+      transition:transform .5s;
+      transform: translateY(-100%);
+    }
 
     &__title {
       text-transform: uppercase;
@@ -49,6 +72,7 @@
         font-size: 20px;
         letter-spacing: 7px;
       }
+
     }
 
     &__list {
@@ -65,9 +89,16 @@
         width: 100%;
         box-shadow: inset 0px -0.5px 0px 0px rgba(255, 255, 255, 0.30);
         cursor: pointer;
+        transform: translateX(100%);
+
+          @for $i from 1 through 5 {
+            &:nth-child(#{$i}) {
+              transition: transform .2s cubic-bezier(0, 0.41, 0.5, 0.73) #{0.2*$i}s;
+            }
+          }
+        }
 
         &:hover {
-          transition: background-color .5s;
           background-color: hsla(40,1%,56%,0.10);
         }
 
@@ -86,4 +117,3 @@
       }
     }
   }
-}

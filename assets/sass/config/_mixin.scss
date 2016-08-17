@@ -1,0 +1,26 @@
+
+
+@mixin media-query($size: md,$type: max) {
+	$value: map-get($sizes, $size);
+	@if $type == max{
+		@media screen and (max-width: $value) {@content;}
+	} @else{
+		@media screen and (min-width: $value) {@content;}
+	}
+}
+
+/*mixin to image*/
+@mixin circle($size) {
+	width:$size;
+	height: $size;
+	border-radius: 50%;
+
+/*mixin to auto media-query propriets*/
+	@include media-query(sm) {
+		margin-left: auto;
+		margin-right: auto;
+		width: 75%;
+		height: auto;
+		margin-top: 10px;
+	}
+}
