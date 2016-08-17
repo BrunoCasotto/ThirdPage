@@ -4,6 +4,10 @@
   padding: 60px;
   position: relative;
 
+  @include media-query(sm,max) {
+    padding: 10px;
+  }
+  
   &__header {
     display: flex;
     flex-direction: column;
@@ -68,23 +72,36 @@
 
     &__title {
       display: flex;
+      flex:1;
       position:relative;
       left:50%;
+      padding: 15px;
+      max-width: 80%;
       transform: translateX(-50%);
-      flex:1;
-      max-width: 70%;
-      font-size: 40px;
+      font-size: 3.3rem;
+
+      @include media-query(sm,max) {
+        font-size: 2rem;
+        padding: 10px;
+      }
     }
 
     &__sub-title {
       display: flex;
+      flex:1;
       position:relative;
       left:50%;
       transform: translateX(-50%);
-      flex:1;
-      max-width: 70%;
+      max-width: 80%;
+      text-align: justify;
       font-weight: 200;
-      font-size:17px;
+      font-size:1.5rem;
+      padding: 15px;
+
+      @include media-query(sm,max) {
+        font-size: 1rem;
+        padding: 10px;
+      }
     }
 
     &__button-menu {
