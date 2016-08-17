@@ -1,21 +1,100 @@
 .main {
   width: 100vw;
   height: 100vh;
-  padding: 40px;
+  padding: 60px;
   position: relative;
 
   &__header {
     display: flex;
+    flex-direction: column;
     position: relative;
     width: 100%;
+    color:#585858;
+
+    &__logo{
+      display: flex;
+      flex:1;
+      flex-direction: row;
+      align-items: center;
+
+      &__icon {
+        position:relative;
+        left:0;
+        display: flex;
+        width: 20px;
+        height: 170px;
+        animation: icon-animate 5s ease-in forwards;
+
+         @keyframes icon-animate {
+             100%{left: 50%;transform: translateX(-50%) rotate(720deg);
+               width: 130px;
+             }
+         }
+
+        polygon {
+         fill:#585858;
+        }
+
+        .line {
+          fill: none;
+          stroke: #585858;
+          stroke-width: 3px;
+          stroke-dasharray: 800;
+          stroke-dashoffset:790;
+          animation: offset 5s 5s ease-in  forwards;
+        }
+
+        @keyframes offset {
+          100% {
+            stroke: white;
+            stroke-dasharray: 1060;
+          }
+        }
+      }
+
+      &__text {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        animation: icon-text 5s 5s ease  forwards;
+        text-shadow: 1px 1px 5px rgba(205, 179, 179, 0.87);
+       }
+
+      @keyframes icon-text {
+        100%{ opacity: 1;}
+      }
+    }
+
+    &__title {
+      display: flex;
+      position:relative;
+      left:50%;
+      transform: translateX(-50%);
+      flex:1;
+      max-width: 70%;
+      font-size: 40px;
+    }
+
+    &__sub-title {
+      display: flex;
+      position:relative;
+      left:50%;
+      transform: translateX(-50%);
+      flex:1;
+      max-width: 70%;
+      font-weight: 200;
+      font-size:17px;
+    }
 
     &__button-menu {
       position: absolute;
       cursor: pointer;
       width: 40px;
-      height: 20px;
+      height: 40px;
       z-index: 100;
       right: 20px;
+      top: -30px;
 
       .close {
         position: fixed;
