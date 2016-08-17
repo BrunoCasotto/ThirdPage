@@ -2,10 +2,68 @@
   width: 100vw;
   height: 100vh;
   padding: 40px;
+  position: relative;
 
   &__header {
     display: flex;
-    
+    position: relative;
+    width: 100%;
+
+    &__button-menu {
+      position: absolute;
+      cursor: pointer;
+      width: 40px;
+      height: 20px;
+      z-index: 100;
+      right: 20px;
+
+      .close {
+        position: fixed;
+        cursor: pointer;
+        z-index: 100;
+        background-color: #333;
+        width: 40px;
+        height: 4px;
+        top:48px;
+
+        &:before {
+          content: '';
+          cursor: pointer;
+          position: fixed;
+          background-color: #333;
+          width: 40px;
+          height: 4px;
+          transition: transform 1s;
+          transform: translateY(-200%);
+        }
+
+        &:after {
+          content: '';
+          cursor: pointer;
+          position: fixed;
+          background-color: #333;
+          width: 40px;
+          height: 4px;
+          transition: transform 1s;
+          transform: translateY(200%);
+        }
+
+        &--active {
+          transition: height 0.5s;
+          height: 0;
+
+          &:before {
+            transition: transform 1s;
+            transform: rotate(50deg);
+          }
+          &:after {
+            transition: transform 1s;
+            transform: rotate(-50deg);
+          }
+        }
+      }
+    }
+
   }
 
   &__content {

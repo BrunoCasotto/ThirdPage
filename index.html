@@ -1,25 +1,57 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>My Website</title>
+        <title>Third website</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400italic,400,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  		  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
         <link rel="stylesheet" href="dist/app.css">
     </head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <body>
-      <div class="main">
-        <div class="overlay">
-          <div class="main__menu">
+      <script type="text/javascript">
+        function show() {
+          if(!$('.menu').hasClass('menu--active')){
+            $('.menu').addClass('menu--active');
+            $('.close').addClass('close--active');
+          }else{
+            $('.menu').removeClass('menu--active');
+            $('.close').removeClass('close--active');
+          }
+        }
+      </script>
 
+      <div class="main">
+        <div class="menu">
+          <div class="menu__content">
+            <div class="menu__content__title">
+              <h2>Menu</h2>
+            </div>
+            <ul class="menu__content__list">
+              <li class="menu__content__list__item">
+                <a href="#">Home</a>
+              </li>
+              <li class="menu__content__list__item">
+                <a href="#">Portfolio</a>
+              </li>
+              <li class="menu__content__list__item">
+                <a href="#">Adonis</a>
+              </li>
+              <li class="menu__content__list__item">
+                <a href="#">Angular</a>
+              </li>
+              <li class="menu__content__list__item">
+                <a href="#">Javascript</a>
+              </li>
+            </ul>
           </div>
         </div>
-
-        <div class="main__content">
-          <div class="main__content__header">
-
+        <div class="main__header">
+          <div class="main__header__button-menu">
+            <label onclick="show()" class="close"></label>
           </div>
-
+        </div>
+        <div class="main__content">
           <div class="main__content__container">
             <div class="main__content__container__row">
 
