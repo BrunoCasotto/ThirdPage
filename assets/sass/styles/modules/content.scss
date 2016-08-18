@@ -103,13 +103,13 @@
     }
 
     &__button-menu {
-      position: absolute;
+      position: fixed;
       cursor: pointer;
       width: 40px;
       height: 40px;
       z-index: 100;
       right: 40px;
-      top: -30px;
+      top: 22px;
 
 
       .close {
