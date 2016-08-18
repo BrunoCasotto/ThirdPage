@@ -1,6 +1,5 @@
 .main {
   width: 100vw;
-  position: relative;
   padding: 50px 0px;
 
   @include media-query(sm,max) {
@@ -12,6 +11,16 @@
     flex-direction: column;
     position: relative;
     color:#585858;
+
+    width: #{map-get($sizes,gl)};
+
+    @include media-query(gl,max) {
+      width: #{map-get($sizes,md)};
+    }
+
+    @include media-query(md,max) {
+      width: #{map-get($sizes,sm)};
+    }
 
     &__logo{
       display: flex;
@@ -27,12 +36,6 @@
         height: 170px;
         animation: icon-animate 5s ease-in forwards;
 
-         @keyframes icon-animate {
-             100%{left: 50%;transform: translateX(-50%) rotate(720deg);
-               width: 130px;
-             }
-         }
-
         polygon {
          fill:#585858;
         }
@@ -45,13 +48,6 @@
           stroke-dashoffset:790;
           animation: offset 5s 5s ease-in  forwards;
         }
-
-        @keyframes offset {
-          100% {
-            stroke: white;
-            stroke-dasharray: 1060;
-          }
-        }
       }
 
       &__text {
@@ -62,10 +58,6 @@
         animation: icon-text 5s 5s ease  forwards;
         text-shadow: 1px 1px 5px rgba(205, 179, 179, 0.87);
        }
-
-      @keyframes icon-text {
-        100%{ opacity: 1;}
-      }
     }
 
     &__title {
@@ -111,7 +103,6 @@
       right: 40px;
       top: 22px;
 
-
       .close {
         position: fixed;
         cursor: pointer;
@@ -144,15 +135,12 @@
         }
 
         &--active {
-          transition: height 0.5s;
           height: 0;
 
           &:before {
-            transition: transform 1s;
             transform: rotate(50deg);
           }
           &:after {
-            transition: transform 1s;
             transform: rotate(-50deg);
           }
         }
@@ -174,8 +162,25 @@
         position: relative;
         display: flex;
         flex-direction: row;
-
       }
     }
   }
+}
+
+@keyframes icon-text {
+  100%{ opacity: 1;}
+}
+
+@keyframes offset {
+  100% {
+    stroke: white;
+    stroke-dasharray: 1060;
+  }
+}
+
+@keyframes icon-animate {
+    100% {
+      left: 50%;transform: translateX(-50%) rotate(720deg);
+      width: 130px;
+    }
 }

@@ -12,37 +12,4 @@
   @include media-query(md,max) {
     width: #{map-get($sizes,sm)};
   }
-
-  .grid {
-
-    &__block {
-
-      &__image {
-        cursor: pointer;
-
-        &:hover {
-          animation: shake 0.3s cubic-bezier(.36,.07,.19,.97) both;
-          transform: translate3d(0, 0, 0);
-        }
-
-        @keyframes shake {
-          10%, 90% {
-            transform: translate3d(-1px, -1px, 0);
-          }
-
-          20%, 80% {
-            transform: translate3d(2px, 2px, 2px);
-          }
-
-          30%, 50%, 70% {
-            transform: translate3d(-4px, -4px, -4px);
-          }
-
-          40%, 60% {
-            transform: translate3d(4px, 4px, 4px);
-          }
-        }
-      }
-    }
-  }
 }

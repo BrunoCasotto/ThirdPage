@@ -2,32 +2,24 @@
   position: fixed;
   width: 100vw;
   height: 100vh;
-  border-top: 0;
-  border-left: 0;
-  background-color: rgba(123, 123, 123, 0.40);
-  z-index: 100;
   top:50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  transition:opacity .5s;
-  transition-timing-function: cubic-bezier(0.04, 0.23, 0.91, 0.74);
+  background-color: rgba(123, 123, 123, 0.40);
+  z-index: 100;
+  transition:opacity .5s cubic-bezier(0.04, 0.23, 0.91, 0.74), visibility .5s cubic-bezier(0.04, 0.23, 0.91, 0.74);
   opacity: 0;
   visibility: hidden;
 
   &--active {
-    transition:opacify .5s;
-    transition-timing-function: cubic-bezier(0.04, 0.23, 0.91, 0.74);
     opacity: 1;
     visibility: visible;
 
     .menu__content {
-      transition:transform .5s;
-      transition-timing-function: cubic-bezier(0.04, 0.23, 0.91, 0.74);
+      transition:transform .5s, width 0.5s cubic-bezier(0.04, 0.23, 0.91, 0.74);
       transform: translateX(0%);
 
       @include media-query(sm,max) {
-        transition:transform .5s, width 0.8s;
-        transition-timing-function: cubic-bezier(0, -0.4, 0.91, 0.98);
         transform: translateY(0%);
         width: 100vw;
       }
@@ -51,14 +43,11 @@
     color:white;
     height: 100%;
     right: 0;
-    transition:transform .5s, width 0.5s;
-    transition-timing-function: cubic-bezier(0.04, 0.23, 0.91, 0.74);
+    transition:transform .5s cubic-bezier(0.04, 0.23, 0.91, 0.74), width 0.5s cubic-bezier(0.04, 0.23, 0.91, 0.74);
     transform: translateX(100%);
     width: 410px;
 
     @include media-query(sm,max) {
-      transition-timing-function: cubic-bezier(0, -0.4, 0.91, 0.98);
-      transition:transform .5s;
       transform: translateY(-100%);
     }
 
