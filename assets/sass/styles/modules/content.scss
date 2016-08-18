@@ -1,18 +1,16 @@
 .main {
   width: 100vw;
-  height: 100vh;
-  padding: 60px;
   position: relative;
+  padding: 50px 0px;
 
   @include media-query(sm,max) {
     padding: 10px;
   }
-  
+
   &__header {
     display: flex;
     flex-direction: column;
     position: relative;
-    width: 100%;
     color:#585858;
 
     &__logo{
@@ -110,8 +108,9 @@
       width: 40px;
       height: 40px;
       z-index: 100;
-      right: 20px;
+      right: 40px;
       top: -30px;
+
 
       .close {
         position: fixed;
@@ -159,17 +158,20 @@
         }
       }
     }
-
   }
 
   &__content {
-    width: 1200px;
+    position: absolute;
     display: flex;
+    left:50%;
+    transform: translateX(-50%);
 
     &__container {
+      position: relative;
       display: flex;
 
       .row {
+        position: relative;
         display: flex;
         flex-direction: row;
 
