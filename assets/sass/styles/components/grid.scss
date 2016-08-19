@@ -1,59 +1,134 @@
 .grid {
-  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 
   &__block {
-    display: flex;
     position: relative;
-    flex-basis: 400px;
-    padding: 20px 0px;
+    display: flex;
+    margin:20px;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    animation: grown 1s ease-out;
 
-    &__image {
-      position: relative;
-      border-radius: 8px;
-      display: flex;
-      overflow: hidden;
-      animation: grown 1s ease-out;
+    @include media-query(md) {
+      margin:10px;
+    }
 
-      @for $i from 1 through 5 {
-          &:nth-child(#{$i}):before {
-           background-color:map-get($colors,$i);
-          }
+    @include media-query(xs) {
+      width: 100%;
+    }
+
+    @for $i from 1 through 12 {
+        &:nth-child(#{$i}):before {
+         background-color:map-get($colors,$i);
+        }
+      }
+
+      &:hover {
+        animation: shake 0.3s ease-in both;
+        transform: translate3d(0, 0, 0);
+        transition: text-shadow 0.5s cubic-bezier(.36,.07,.19,.97);
+        text-shadow: 1px 5px 5px rgba(57, 59, 62, 0.95);
+
+        &:before {
+          transition: opacity 1s cubic-bezier(.36,.07,.19,.97);
+          opacity: 0;
         }
 
-      @keyframes grown {
-          from {transform: scale(0.9);}
-          to {transform: scale(1);}
+        &after {
+          transition: opacity 1s cubic-bezier(.36,.07,.19,.97);
+          opacity: 0;
+        }
+
+        .grid__block__text {
+          transition: top 1s cubic-bezier(.36,.07,.19,.97), justify-content 1s cubic-bezier(.36,.07,.19,.97) ;
+          top: 10%;
+        }
       }
 
       &:before {
-        content:'';
         position: absolute;
+        content:'';
         display:block;
         z-index: 1;
         width: 100%;
         height: 100%;
         opacity: 0.8;
-      }
 
-      &__text {
-        position: absolute;
-        display: block;
-        width: 100%;
-        padding: 20px;
-        text-align: center;
-        color:white;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 2;
-
-        h3 {
-          font-size: 1.5rem;
+        @include media-query(xs) {
+          width: 100%;
         }
       }
+
+      &:after {
+        position: absolute;
+        content:'';
+        display:block;
+        background-image: url('../img/background.png');
+        background-position: center;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        opacity: 0.2;
+
+        @include media-query(xs) {
+          width: 100%;
+        }
+      }
+    &__text {
+      position: absolute;
+      display: block;
+      width: 100%;
+      padding: 20px;
+      text-align: center;
+      color:white;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+
+      @include media-query(xs) {
+        width: 100%;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+      }
     }
+    &__image {
+      position: relative;
+      margin: 0 auto;
+      display: flex;
+      overflow: hidden;
+
+      @include media-query(xs) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@keyframes grown {
+    from {transform: scale(0.9);}
+    to {transform: scale(1);}
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, -1px, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(2px, 2px, 2px);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, -4px, -4px);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 4px, 4px);
   }
 }

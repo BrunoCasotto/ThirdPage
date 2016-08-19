@@ -1,7 +1,7 @@
 
 /* variable for media-query mixin*/
 $sizes: (
-	xs: 336px,
+	xs: 400px,
 	sm: 776px,
 	md: 992px,
 	gl: 1200px
@@ -25,9 +25,16 @@ $tab: 3;
 
 /*variation of colors*/
 $colors: (
-  1:red,
-  2:blue,
-  3:yellow,
-  4:blue,
-  5:yellow
+  1: #f2849e,
+  2:#7ecaf6,
+  3: #7bd0c1,
+  4: #c75b9b,
+  5: #ae85ca,
+	6: #f2849e,
+  7:#7ecaf6,
+  8: #7bd0c1,
+  9: #c75b9b,
+  10: #ae85ca,
+	11: #f2849e,
+  12:#7ecaf6
 );
