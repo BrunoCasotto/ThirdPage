@@ -1,26 +1,12 @@
 .main {
-  width: 100vw;
+  width: inherit;
   padding: 50px 0px;
-
-  @include media-query(sm,max) {
-    padding: 10px;
-  }
 
   &__header {
     display: flex;
     flex-direction: column;
-    position: relative;
     color:#585858;
-
-    width: #{map-get($sizes,gl)};
-
-    @include media-query(gl,max) {
-      width: #{map-get($sizes,md)};
-    }
-
-    @include media-query(md,max) {
-      width: #{map-get($sizes,sm)};
-    }
+    width: inherit;
 
     &__logo{
       display: flex;
@@ -34,7 +20,7 @@
         display: flex;
         width: 20px;
         height: 170px;
-        animation: icon-animate 5s ease-in forwards;
+        animation: icon-animate 2s ease-in forwards;
 
         polygon {
          fill:#585858;
@@ -46,7 +32,7 @@
           stroke-width: 3px;
           stroke-dasharray: 800;
           stroke-dashoffset:790;
-          animation: offset 5s 5s ease-in  forwards;
+          animation: offset 2.5s 1s ease-in  forwards;
         }
       }
 
@@ -55,7 +41,7 @@
         left: 50%;
         transform: translateX(-50%);
         opacity: 0;
-        animation: icon-text 5s 5s ease  forwards;
+        animation: icon-text 5s 1.5s ease  forwards;
         text-shadow: 1px 1px 5px rgba(205, 179, 179, 0.87);
        }
     }
@@ -66,7 +52,7 @@
       position:relative;
       left:50%;
       padding: 15px;
-      max-width: 80%;
+      max-width: 70%;
       transform: translateX(-50%);
       font-size: 3.3rem;
 
@@ -82,7 +68,7 @@
       position:relative;
       left:50%;
       transform: translateX(-50%);
-      max-width: 80%;
+      max-width: 70%;
       text-align: justify;
       font-weight: 200;
       font-size:1.5rem;
@@ -93,76 +79,14 @@
         padding: 10px;
       }
     }
-
-    &__button-menu {
-      position: fixed;
-      cursor: pointer;
-      width: 40px;
-      height: 40px;
-      z-index: 100;
-      right: 40px;
-      top: 22px;
-
-      .close {
-        position: fixed;
-        cursor: pointer;
-        z-index: 100;
-        background-color: #333;
-        width: 40px;
-        height: 4px;
-        top:48px;
-
-        &:before {
-          content: '';
-          cursor: pointer;
-          position: fixed;
-          background-color: #333;
-          width: 40px;
-          height: 4px;
-          transition: transform 1s;
-          transform: translateY(-200%);
-        }
-
-        &:after {
-          content: '';
-          cursor: pointer;
-          position: fixed;
-          background-color: #333;
-          width: 40px;
-          height: 4px;
-          transition: transform 1s;
-          transform: translateY(200%);
-        }
-
-        &--active {
-          height: 0;
-
-          &:before {
-            transform: rotate(50deg);
-          }
-          &:after {
-            transform: rotate(-50deg);
-          }
-        }
-      }
-    }
   }
 
   &__content {
-    position: absolute;
     display: flex;
-    left:50%;
-    transform: translateX(-50%);
 
     &__container {
-      position: relative;
       display: flex;
-
-      .row {
-        position: relative;
-        display: flex;
-        flex-direction: row;
-      }
+      margin: 0 auto;
     }
   }
 }

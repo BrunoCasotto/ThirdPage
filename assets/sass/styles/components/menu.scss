@@ -1,3 +1,55 @@
+.button-menu {
+  position: fixed;
+  cursor: pointer;
+  width: 40px;
+  height: 30px;
+  z-index: 101;
+  top: 15px;
+  right: 20px;
+
+  .close {
+    position: fixed;
+    background-color: #333;
+    width: 40px;
+    height: 4px;
+    top: 30px;
+    right: 20px;
+
+    &:before {
+      content: '';
+      cursor: pointer;
+      position: fixed;
+      background-color: #333;
+      width: 40px;
+      height: 4px;
+      transition: transform 1s;
+      transform: translateY(-200%);
+    }
+
+    &:after {
+      content: '';
+      cursor: pointer;
+      position: fixed;
+      background-color: #333;
+      width: 40px;
+      height: 4px;
+      transition: transform 1s;
+      transform: translateY(200%);
+    }
+
+    &--active {
+      height: 0;
+
+      &:before {
+        transform: rotate(50deg);
+      }
+      &:after {
+        transform: rotate(-50deg);
+      }
+    }
+  }
+}
+
 .menu {
   position: fixed;
   width: 100vw;
