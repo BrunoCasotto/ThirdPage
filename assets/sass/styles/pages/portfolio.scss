@@ -2,6 +2,7 @@
   justify-content: center;
   position: relative;
   left:0;
+  padding: 5em 0;
 
   @include media-query(gl,min) {
     width: #{map-get($sizes,gl)};
