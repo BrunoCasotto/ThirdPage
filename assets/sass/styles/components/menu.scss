@@ -7,6 +7,10 @@
   top: 15px;
   right: 20px;
 
+  @include media-query(md) {
+    opacity: 0.5;
+  }
+
   .close {
     position: fixed;
     background-color: #333;

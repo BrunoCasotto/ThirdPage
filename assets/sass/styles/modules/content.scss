@@ -1,6 +1,10 @@
 .main {
   width: inherit;
+<<<<<<< HEAD
   padding: 50px 0px;
+=======
+  padding-top: 50px;
+>>>>>>> master
 
   &__header {
     display: flex;
@@ -13,6 +17,11 @@
       flex:1;
       flex-direction: row;
       align-items: center;
+
+      @include media-query(xs) {
+        flex-direction: column;
+        align-items:baseline;
+      }
 
       &__icon {
         position:relative;
@@ -56,9 +65,11 @@
       transform: translateX(-50%);
       font-size: 3.3rem;
 
-      @include media-query(sm,max) {
-        font-size: 2rem;
+      @include media-query(md,max) {
+        font-size: 4vw;
         padding: 10px;
+        max-width: 90%;
+        padding: 5px;
       }
     }
 
@@ -74,9 +85,14 @@
       font-size:1.5rem;
       padding: 15px;
 
-      @include media-query(sm,max) {
+      @include media-query(md,max) {
         font-size: 1rem;
         padding: 10px;
+<<<<<<< HEAD
+=======
+        max-width: 90%;
+        padding: 5px;
+>>>>>>> master
       }
     }
   }
@@ -89,12 +105,29 @@
       margin: 0 auto;
     }
   }
+<<<<<<< HEAD
 }
 
 @keyframes icon-text {
   100%{ opacity: 1;}
 }
 
+=======
+
+  &__footer {
+    background-color: #f6f6f6;
+    text-align: center;
+    font-size: 1rem;
+    color:#585858;
+    padding: 3em;
+  }
+}
+
+@keyframes icon-text {
+  100%{ opacity: 1;}
+}
+
+>>>>>>> master
 @keyframes offset {
   100% {
     stroke: white;

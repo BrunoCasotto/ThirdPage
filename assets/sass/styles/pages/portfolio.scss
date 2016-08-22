@@ -2,6 +2,10 @@
   justify-content: center;
   position: relative;
   left:0;
+<<<<<<< HEAD
+=======
+  padding: 5em 0;
+>>>>>>> master
 
   @include media-query(gl,min) {
     width: #{map-get($sizes,gl)};
