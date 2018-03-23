@@ -1,6 +1,5 @@
 .main {
   width: inherit;
-  padding-top: 50px;
 
   &__header {
     display: flex;
@@ -92,6 +91,10 @@
 
   &__content {
     display: flex;
+
+    &__form {
+      margin-top: 20px;
+    }
 
     &__container {
       display: flex;

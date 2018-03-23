@@ -3,50 +3,10 @@
     <head>
         <title>Third website</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400italic,400,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
-  		  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
         <link rel="stylesheet" href="dist/app.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"></link>
     </head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <body>
-      <script type="text/javascript">
-        function show(event) {
-          if(!$('.menu').hasClass('menu--active')){
-            $('.menu').addClass('menu--active');
-            $('.close').addClass('close--active');
-          }else{
-            $('.menu').removeClass('menu--active');
-            $('.close').removeClass('close--active');
-          }
-        }
-      </script>
-      <div class="button-menu">
-        <label onclick="show()" class="close"></label>
-      </div>
-      <div class="menu">
-        <div class="menu__content">
-          <div class="menu__content__title">
-            <h2>Menu</h2>
-          </div>
-          <ul class="menu__content__list">
-            <li class="menu__content__list__item item1">
-              <a href="#">Home</a>
-            </li>
-            <li class="menu__content__list__item item2">
-              <a href="#">Portfolio</a>
-            </li>
-            <li class="menu__content__list__item item3">
-              <a href="#">Adonis</a>
-            </li>
-            <li class="menu__content__list__item item4">
-              <a href="#">Angular</a>
-            </li>
-            <li class="menu__content__list__item item5">
-              <a href="#">Javascript</a>
-            </li>
-          </ul>
-        </div>
-      </div>
       <div class="main">
         <div class="main__header">
           <div class="main__header__logo">
@@ -63,195 +23,57 @@
               C98.667,58.973,99.353,59.322,99.835,60.02z"/>
             </svg>
             <div class="main__header__logo__text">
-              <h3>Phanton</h3>
+              <h2>ToDo - login</h2>
             </div>
           </div>
-          <h1 class="main__header__title">This is Phantom, a free, fully responsive site
-            template designed by HTML5 UP.</h1>
-            <p class="main__header__sub-title">
-              Etiam quis viverra lorem, in semper lorem. Sed nisl arcu euismod sit amet nisi euismod sed cursus arcu elementum ipsum arcu vivamus quis venenatis orci lorem ipsum et magna feugiat veroeros aliquam. Lorem ipsum dolor sit amet nullam dolore.
-            </p>
         </div>
         <div class="main__content">
-          <div class="main__content__container">
-              <div class="portfolio">
-                <div class="grid">
-                  <div class="grid__block">
-                      <div class="grid__block__text">
-                          <h3>Magna</h3>
-                          <p>
-                            lorem ipsum et magna feugiat veroeros aliquam.
-                             Lorem ipsum dolor sit amet.
-                          </p>
-                      </div>
-                      <img class="grid__block__image" src="./img/pic01.jpg" alt="" />
+          <div class="container-fluid">
+            <div class="row justify-content-md-center">
+              <div class="col-4 card card-body main__content__form">
+                <form >
+                  <div class="form-group">
+                      <input
+                        value=""
+                        class="form-control"
+                        type="email"
+                        aria-describedby="emailHelp"
+                        id="exampleInputEmail1"
+                        placeholder="Email"
+                      />
                   </div>
 
-                  <div class="grid__block">
-                      <div class="grid__block__text">
-                          <h3>Magna</h3>
-                          <p>
-                            lorem ipsum et magna feugiat veroeros aliquam.
-                             Lorem ipsum dolor sit amet.
-                          </p>
-                      </div>
-                      <img class="grid__block__image" src="./img/pic01.jpg" alt="" />
+                  <div class="form-group">
+                    <input
+                      value=""
+                      class="form-control"
+                      id="exampleInputPassword1"
+                      placeholder="Password"
+                      type="password"
+                    />
                   </div>
 
-                  <div class="grid__block">
-                      <div class="grid__block__text">
-                          <h3>Magna</h3>
-                          <p>
-                            lorem ipsum et magna feugiat veroeros aliquam.
-                             Lorem ipsum dolor sit amet.
-                          </p>
-                      </div>
-                      <img class="grid__block__image" src="./img/pic01.jpg" alt="" />
+                  <div class="form-row">
+                    <div class="col">
+                      <input
+                        value="Registrar"
+                        action=""
+                        class="btn btn-primary col"
+                      />
+                    </div>
+                    <div class="col">
+                      <input
+                        value="Entrar"
+                        action=""
+                        class="btn btn-primary col"
+                      />
+                    </div>
                   </div>
-                  <div class="grid__block">
-                      <div class="grid__block__text">
-                          <h3>Magna</h3>
-                          <p>
-                            lorem ipsum et magna feugiat veroeros aliquam.
-                             Lorem ipsum dolor sit amet.
-                          </p>
-                      </div>
-                      <img class="grid__block__image" src="./img/pic02.jpg" alt="" />
-                  </div>
-                  <div class="grid__block">
-                      <div class="grid__block__text">
-                          <h3>Magna</h3>
-                          <p>
-                            lorem ipsum et magna feugiat veroeros aliquam.
-                             Lorem ipsum dolor sit amet.
-                          </p>
-                      </div>
-                      <img class="grid__block__image" src="./img/pic03.jpg" alt="" />
-                  </div>
-                  <div class="grid__block">
-                      <div class="grid__block__text">
-                          <h3>Magna</h3>
-                          <p>
-                            lorem ipsum et magna feugiat veroeros aliquam.
-                             Lorem ipsum dolor sit amet.
-                          </p>
-                      </div>
-                      <img class="grid__block__image" src="./img/pic04.jpg" alt="" />
-                  </div>
-                  <div class="grid__block">
-                      <div class="grid__block__text">
-                          <h3>Magna</h3>
-                          <p>
-                            lorem ipsum et magna feugiat veroeros aliquam.
-                             Lorem ipsum dolor sit amet.
-                          </p>
-                      </div>
-                      <img class="grid__block__image" src="./img/pic05.jpg" alt="" />
-                  </div>
-                  <div class="grid__block">
-                      <div class="grid__block__text">
-                          <h3>Magna</h3>
-                          <p>
-                            lorem ipsum et magna feugiat veroeros aliquam.
-                             Lorem ipsum dolor sit amet.
-                          </p>
-                      </div>
-                      <img class="grid__block__image" src="./img/pic06.jpg" alt="" />
-                  </div>
-                  <div class="grid__block">
-                      <div class="grid__block__text">
-                          <h3>Magna</h3>
-                          <p>
-                            lorem ipsum et magna feugiat veroeros aliquam.
-                             Lorem ipsum dolor sit amet.
-                          </p>
-                      </div>
-                      <img class="grid__block__image" src="./img/pic07.jpg" alt="" />
-                  </div>
-                  <div class="grid__block">
-                      <div class="grid__block__text">
-                          <h3>Magna</h3>
-                          <p>
-                            lorem ipsum et magna feugiat veroeros aliquam.
-                             Lorem ipsum dolor sit amet.
-                          </p>
-                      </div>
-                      <img class="grid__block__image" src="./img/pic08.jpg" alt="" />
-                  </div>
-                  <div class="grid__block">
-                      <div class="grid__block__text">
-                          <h3>Magna</h3>
-                          <p>
-                            lorem ipsum et magna feugiat veroeros aliquam.
-                             Lorem ipsum dolor sit amet.
-                          </p>
-                      </div>
-                      <img class="grid__block__image" src="./img/pic01.jpg" alt="" />
-                  </div>
-                  <div class="grid__block">
-                      <div class="grid__block__text">
-                          <h3>Magna</h3>
-                          <p>
-                            lorem ipsum et magna feugiat veroeros aliquam.
-                             Lorem ipsum dolor sit amet.
-                          </p>
-                      </div>
-                      <img class="grid__block__image" src="./img/pic01.jpg" alt="" />
-                  </div>
-                </div>
+                </form>
               </div>
             </div>
-          </div>
-
-          <div class="main__content">
-            <div class="main__content__container contact">
-              <div class="form">
-                <div class="form__content">
-                  <div class="form__content__row">
-                    <h3 class="form__content__row__title title-grey">GET IN TOUCH</h3>
-                  </div>
-
-                  <div class="form__content__row">
-                    <div class="form__content__row__input-group">
-                      <input type="text" class="form__content__row__input-group__input" placeholder="Name" name="name" value="">
-                      <span class="line"></span>
-                    </div>
-                    <div class="form__content__row__input-group">
-                      <input type="text" class="form__content__row__input-group__input" placeholder="Email" name="name" value="">
-                      <span class="line"></span>
-                    </div>
-                  </div>
-                  <div class="form__content__row">
-                    <div class="form__content__row__input-group">
-                      <input type="text" class="form__content__row__input-group__input" placeholder="Message" name="name" value="">
-                      <span class="line"></span>
-                    </div>
-                  </div>
-                  <div class="form__content__row">
-                    <a class="form__content__row__button">send</a>
-                  </div>
-                </div>
-              </div>
-              <div class="contact__social">
-                <h3 class="contact__social__title title-grey"> Follow</h3>
-                <div class="contact__social__icons">
-                  <a href="#" class="icon fa fa-twitter"></a>
-                  <a href="#" class="icon fa fa-facebook"></a>
-                  <a href="#" class="icon fa fa-instagram"></a>
-                  <a href="#" class="icon fa fa-dribbble"></a>
-                  <a href="#" class="icon fa fa-github"></a>
-                  <a href="#" class="icon fa fa-500px"></a>
-                  <a href="#" class="icon fa fa-phone"></a>
-                  <a href="#" class="icon fa fa-envelope-o"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="main__footer">
-            <p>
-              © Untitled. All rights reservedDesign: HTML5 UPDemo Images: Unsplash
-            </p>
           </div>
         </div>
+      </div>
     </body>
 </html>
