@@ -1,3 +1,7 @@
+/* base import*/
+@import 'base/base';
+@import "base/helpers";
+
 /*imports template*/
 @import 'template';
 
@@ -11,6 +15,7 @@
 /*components import*/
 @import 'styles/components/menu';
 @import 'styles/components/grid';
+@import 'styles/components/form';
 
 /*pages import*/
 @import 'styles/pages/portfolio';

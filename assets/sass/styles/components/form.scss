@@ -1,0 +1,88 @@
+.form {
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 80%;
+
+    @include media-query(md,max) {
+     width: 100%;
+    }
+
+    &__row {
+      display: flex;
+      flex-wrap: wrap;
+      padding:1em;
+
+      &__title {
+        @include media-query(sm) {
+          margin: 0 auto;
+        }
+      }
+
+      &__input-group {
+        display: flex;
+        flex:1;
+        flex-direction: column;
+
+        &__input {
+          flex:1;
+          font-family:inherit;
+          background-color: transparent;
+          border: none;
+          color: inherit;
+          text-decoration: none;
+          height: 3em;
+          margin: 0 0.5em;
+          font-size: 1.3rem;
+          font-weight: 300;
+
+          &:focus  {
+            outline: none;
+          }
+
+          &:focus + .line {
+            border-top: solid 1px #ff1065;
+            width: 100%;
+          }
+
+          &--message {
+            height: 6em;
+          }
+        }
+
+        .line {
+          transition: width .5s ease-in;
+          width: 0%;
+        }
+      }
+
+      &__button {
+        display: flex;
+        justify-content: center;
+        text-transform: uppercase;
+        background-color:#585858;
+        font-weight: 900;
+        font-size: 0.8em;
+        color:white;
+        letter-spacing: 0.35em;
+        line-height: 3.45em;
+        padding: 0 2em 0 2em;
+        height: 3.5em;
+        border-radius: 5px;
+        cursor:pointer;
+        margin: 1em 1em;
+
+        &:hover {
+          transition: background-color .5s ease-in;
+          background-color:#f2849e;
+        }
+
+        @include media-query(md,max) {
+         width: 100%;
+        }
+      }
+    }
+  }
+}
