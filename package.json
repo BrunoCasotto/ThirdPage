@@ -7,7 +7,9 @@
     "build-css": "node-sass assets/sass/app.scss -o dist/ --source-map true",
     "dev": "rerun-script",
     "lite": "lite-server",
-    "start": "concurrently \"npm run dev\"  \"npm run lite\""
+    "start:dev": "concurrently \"npm run dev\"  \"npm run lite\"",
+    "heroku-postbuild": "npm run build-css",
+    "start": "node index.js"
   },
   "watches": {
     "build-css": "assets/sass/**/**/*.scss"
